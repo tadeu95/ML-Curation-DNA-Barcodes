@@ -1,17 +1,18 @@
-This repository contains the scripts used in a pilot study evaluating artificial neural networks (ANNs) and XGBoost models for supporting the curation of DNA barcode reference libraries. The workflow includes data preparation, feature extraction, hyperparameter tuning, and final cross-validated model evaluation for classifying records within discordant Barcode Index Numbers (BINs).
+# Machine learning for DNA barcode reference library curation
 
-Contents
+This repository contains the scripts documenting the analytical workflow of a pilot study evaluating rule-based and machine-learning approaches for supporting the curation of DNA barcode reference libraries.
 
-01_feature_extraction.R — Mines records from BOLD and extracts data features.
+The workflow includes data preparation, feature extraction, hyperparameter tuning, and final model evaluation for classifying records within discordant Barcode Index Numbers (BINs).
 
-02_ann_grid_search.py — Hyperparameter search for ANN models.
+## Contents
 
-03_xgboost_grid_search.py — Hyperparameter search for XGBoost models.
+- `01_data_preparation.R` — Data retrieval, preprocessing, feature extraction, and preparation of the final dataset.
+- `02_ann_grid_search.py` — Hyperparameter search for ANN models.
+- `03_xgboost_grid_search.py` — Hyperparameter search for XGBoost models.
+- `04_logistic_grid_search.py` — Hyperparameter search for logistic regression models.
+- `05_ann_final.py` — Final ANN evaluation.
+- `06_logistic_final.py` — Final logistic regression evaluation.
+- `07_xgboost_final.py` — Final XGBoost evaluation and permutation importance.
+- `08_simple_rule.py` — Evaluation of the simple rule-based baseline.
 
-04_ann_final_cv.py — Final 10-fold cross-validation evaluation of the selected ANN configuration.
 
-05_xgboost_final_cv.py — Final 10-fold cross-validation evaluation of the selected XGBoost model.
-
-Purpose
-
-These scripts document the analytical workflow used to test whether machine-learning models can assist in identifying putatively supported vs. inconclusive records in discordant BINs.
